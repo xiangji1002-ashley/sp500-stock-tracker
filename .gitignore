@@ -1,0 +1,24 @@
+# Data files
+data/
+*.csv
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Secrets (never commit)
+.env
+credentials.json
+
+# Results screenshots (optional - add if you want to commit them)
+# results/

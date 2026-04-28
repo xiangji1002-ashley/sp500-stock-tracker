@@ -1,0 +1,237 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="sp500" name="S&amp;P 500 Pipeline">
+    <mxGraphModel dx="1571" dy="889" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t1" parent="1" style="text;html=1;fontSize=22;fontStyle=1;align=center;fillColor=none;strokeColor=none;fontColor=#1a365d;" value="S&amp;P 500 Stock Data Engineering Pipeline" vertex="1">
+          <mxGeometry height="28" width="1100" x="45" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" parent="1" style="text;html=1;fontSize=11;align=center;fillColor=none;strokeColor=none;fontColor=#888;" value="Lambda Architecture  |  Medallion (raw / stg / marts)  |  Apache Iceberg on S3" vertex="1">
+          <mxGeometry height="16" width="900" x="125" y="33" as="geometry" />
+        </mxCell>
+        <mxCell id="src_bg" parent="1" style="rounded=1;fillColor=#FFEBEE;strokeColor=#EF9A9A;strokeWidth=2;verticalAlign=top;fontStyle=1;fontSize=13;fontColor=#C62828;spacingTop=5;align=center;shadow=1;" value="Data Sources" vertex="1">
+          <mxGeometry height="540" width="150" x="15" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="raw_bg" parent="1" style="rounded=1;fillColor=#FFF8E1;strokeColor=#FFE082;strokeWidth=2;verticalAlign=top;fontStyle=1;fontSize=13;fontColor=#F57F17;spacingTop=5;align=center;shadow=1;" value="Bronze Layer&#xa;(raw data)" vertex="1">
+          <mxGeometry height="540" width="220" x="190" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="stg_bg" parent="1" style="rounded=1;fillColor=#E3F2FD;strokeColor=#90CAF9;strokeWidth=2;dashed=1;dashPattern=8 4;verticalAlign=top;fontStyle=1;fontSize=13;fontColor=#1565C0;spacingTop=5;align=center;shadow=1;" value="Silver Layer&#xa;(cleansed)" vertex="1">
+          <mxGeometry height="540" width="220" x="430" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="gold_bg" parent="1" style="rounded=1;fillColor=#FFF8E1;strokeColor=#FFE082;strokeWidth=2;verticalAlign=top;fontStyle=1;fontSize=13;fontColor=#F57F17;spacingTop=5;align=center;shadow=1;" value="Gold Layer&#xa;(business aggregations)" vertex="1">
+          <mxGeometry height="540" width="280" x="680" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="serve_bg" parent="1" style="rounded=1;fillColor=#F3E5F5;strokeColor=#CE93D8;strokeWidth=2;verticalAlign=top;fontStyle=1;fontSize=13;fontColor=#6A1B9A;spacingTop=5;align=center;shadow=1;" value="Analytics /&#xa;Consumption" vertex="1">
+          <mxGeometry height="540" width="170" x="985" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="yf_icon" parent="1" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=1;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.json_script;" value="yfinance&#xa;(Python)" vertex="1">
+          <mxGeometry height="55" width="40" x="62" y="115" as="geometry" />
+        </mxCell>
+        <mxCell id="yf_desc" parent="1" style="text;html=1;fontSize=8;fontColor=#666;align=center;" value="S&amp;P 500&#xa;Daily OHLCV&#xa;500 stocks" vertex="1">
+          <mxGeometry height="30" width="110" x="35" y="178" as="geometry" />
+        </mxCell>
+        <mxCell id="wiki_icon" parent="1" style="rounded=1;whiteSpace=wrap;fillColor=#FFCDD2;strokeColor=#EF9A9A;fontSize=9;fontStyle=1;shadow=1;" value="Wikipedia" vertex="1">
+          <mxGeometry height="25" width="75" x="45" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="wiki_desc" parent="1" style="text;html=1;fontSize=7;fontColor=#999;align=center;" value="Ticker list" vertex="1">
+          <mxGeometry height="12" width="75" x="45" y="242" as="geometry" />
+        </mxCell>
+        <mxCell id="alp_icon" parent="1" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=api;fontSize=10;fontStyle=1;fontColor=#232F3E;" value="Alpaca&#xa;Markets API" vertex="1">
+          <mxGeometry height="34" width="35" x="65" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="alp_desc" parent="1" style="text;html=1;fontSize=8;fontColor=#666;align=center;" value="Real-time quotes&#xa;feed=iex (free)&#xa;Every 5 min" vertex="1">
+          <mxGeometry height="28" width="110" x="35" y="487" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_raw" parent="1" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#7AA116;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=1;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.bucket_with_objects;" value="Amazon S3&#xa;(Bronze)" vertex="1">
+          <mxGeometry height="57" width="55" x="262" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="raw_tbl" parent="1" style="shape=mxgraph.aws4.glue_data_catalog;sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#8C4FFF;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=9;fontStyle=1;aspect=fixed;pointerEvents=1;" value="staging_daily&#xa;_stock_price" vertex="1">
+          <mxGeometry height="54" width="50" x="265" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="glue_b" parent="1" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#8C4FFF;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=1;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.glue;" value="AWS Glue&#xa;(Spark ETL)" vertex="1">
+          <mxGeometry height="60" width="60" x="260" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="glue_b_desc" parent="1" style="text;html=1;fontSize=7;fontColor=#7B1FA2;align=center;" value="CSV parse&#xa;Type cast&#xa;CTAS to Iceberg" vertex="1">
+          <mxGeometry height="25" width="100" x="240" y="358" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_stg" parent="1" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#7AA116;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=1;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.bucket_with_objects;" value="Amazon S3&#xa;(Silver)" vertex="1">
+          <mxGeometry height="57" width="55" x="510" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="stg_cat" parent="1" style="shape=mxgraph.aws4.glue_data_catalog;sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#8C4FFF;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=9;fontStyle=1;aspect=fixed;pointerEvents=1;" value="fact_daily&#xa;_stock_price" vertex="1">
+          <mxGeometry height="54" width="50" x="515" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="trino_b" parent="1" style="rounded=1;whiteSpace=wrap;fillColor=#00ACC1;strokeColor=#00838F;fontColor=#fff;fontSize=10;fontStyle=1;shadow=1;arcSize=15;" value="Starburst Galaxy&#xa;(Trino SQL)" vertex="1">
+          <mxGeometry height="40" width="140" x="465" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="trino_b_desc" parent="1" style="text;html=1;fontSize=7;fontColor=#00838F;align=center;" value="Column rename&#xa;INSERT INTO (idempotent)" vertex="1">
+          <mxGeometry height="18" width="120" x="475" y="345" as="geometry" />
+        </mxCell>
+        <mxCell id="trino_init" parent="1" style="rounded=1;whiteSpace=wrap;fillColor=#00ACC1;strokeColor=#00838F;fontColor=#fff;fontSize=10;fontStyle=1;shadow=1;arcSize=15;" value="Starburst Galaxy&#xa;(Trino SQL)" vertex="1">
+          <mxGeometry height="40" width="140" x="465" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="trino_init_desc" parent="1" style="text;html=1;fontSize=7;fontColor=#00838F;align=center;" value="Initialize base rows&#xa;INSERT from fact&#xa;(trade_date, ticker)" vertex="1">
+          <mxGeometry height="22" width="120" x="475" y="465" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_gold" parent="1" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#7AA116;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=1;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.bucket_with_objects;" value="Amazon S3&#xa;(Gold)" vertex="1">
+          <mxGeometry height="57" width="55" x="790" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="gold_cat" parent="1" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#8C4FFF;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=8;fontStyle=1;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.glue_data_catalog;" value="Glue Data&#xa;Catalog" vertex="1">
+          <mxGeometry height="38" width="35" x="910" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="g_t1" parent="1" style="rounded=1;whiteSpace=wrap;fillColor=#C8E6C9;strokeColor=#66BB6A;fontSize=9;fontStyle=1;shadow=1;" value="cumulative_stock_price" vertex="1">
+          <mxGeometry height="22" width="175" x="700" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="g_t2" parent="1" style="rounded=1;whiteSpace=wrap;fillColor=#C8E6C9;strokeColor=#66BB6A;fontSize=9;fontStyle=1;shadow=1;" value="dim_daily_stock_price" vertex="1">
+          <mxGeometry height="22" width="175" x="700" y="208" as="geometry" />
+        </mxCell>
+        <mxCell id="g_t3" parent="1" style="rounded=1;whiteSpace=wrap;fillColor=#C8E6C9;strokeColor=#66BB6A;fontSize=9;fontStyle=1;shadow=1;" value="dim_ticker_details" vertex="1">
+          <mxGeometry height="22" width="175" x="700" y="236" as="geometry" />
+        </mxCell>
+        <mxCell id="trino_m" parent="1" style="rounded=1;whiteSpace=wrap;fillColor=#00ACC1;strokeColor=#00838F;fontColor=#fff;fontSize=10;fontStyle=1;shadow=1;arcSize=15;" value="Starburst Galaxy&#xa;(Trino SQL)" vertex="1">
+          <mxGeometry height="40" width="140" x="720" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="trino_m_desc" parent="1" style="text;html=1;fontSize=7;fontColor=#00838F;align=center;" value="ARRAY_AGG / MIN / MAX&#xa;AVG / DQ Checks" vertex="1">
+          <mxGeometry height="18" width="120" x="730" y="335" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_rt" parent="1" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#7AA116;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=1;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.bucket_with_objects;" value="Amazon S3&#xa;(Gold)" vertex="1">
+          <mxGeometry height="57" width="55" x="790" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_tbl" parent="1" style="rounded=1;whiteSpace=wrap;fillColor=#C8E6C9;strokeColor=#66BB6A;fontSize=9;fontStyle=1;shadow=1;" value="current_day_stock_price&#xa;(8 columns)" vertex="1">
+          <mxGeometry height="28" width="175" x="700" y="465" as="geometry" />
+        </mxCell>
+        <mxCell id="glue_rt" parent="1" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#8C4FFF;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=9;fontStyle=1;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.glue;" value="AWS Glue&#xa;(Microbatch)" vertex="1">
+          <mxGeometry height="45" width="45" x="895" y="415" as="geometry" />
+        </mxCell>
+        <mxCell id="glue_rt_desc" parent="1" style="text;html=1;fontSize=7;fontColor=#7B1FA2;align=center;" value="Alpaca polling&#xa;MERGE INTO&#xa;Every 5 min" vertex="1">
+          <mxGeometry height="22" width="75" x="880" y="515" as="geometry" />
+        </mxCell>
+        <mxCell id="sup_h" parent="1" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#8C4FFF;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=1;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.opensearch_dashboards;" value="Apache&#xa;Superset" vertex="1">
+          <mxGeometry height="49" width="65" x="1035" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="sup_h_desc" parent="1" style="text;html=1;fontSize=8;fontColor=#666;align=center;" value="Historical Analysis&#xa;Dashboard&#xa;Trend / Sector&#xa;Volume / Ranking" vertex="1">
+          <mxGeometry height="38" width="115" x="1010" y="236" as="geometry" />
+        </mxCell>
+        <mxCell id="sup_rt" parent="1" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#8C4FFF;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=1;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.opensearch_dashboards;" value="Apache&#xa;Superset" vertex="1">
+          <mxGeometry height="49" width="65" x="1035" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="sup_rt_desc" parent="1" style="text;html=1;fontSize=8;fontColor=#666;align=center;" value="Realtime Dashboard&#xa;Gainers / Losers x6&#xa;30s auto-refresh&#xa;Virtual Dataset SQL" vertex="1">
+          <mxGeometry height="38" width="125" x="1005" y="493" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="yf_icon" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#C62828;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="s3_raw">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1l" connectable="0" parent="e1" style="edgeLabel;html=1;fontSize=9;fontStyle=1;fontColor=#C62828;" value="CSV" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="s3_raw" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#7B1FA2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="s3_stg">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2l" connectable="0" parent="e2" style="edgeLabel;html=1;fontSize=8;fontStyle=1;fontColor=#7B1FA2;" value="AWS Glue&#xa;(Spark)" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="s3_stg" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#00838F;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="s3_gold">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3l" connectable="0" parent="e3" style="edgeLabel;html=1;fontSize=8;fontStyle=1;fontColor=#00838F;" value="Trino SQL&#xa;transforms" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="s3_gold" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#6A1B9A;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" target="sup_h">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4l" connectable="0" parent="e4" style="edgeLabel;html=1;fontSize=8;fontStyle=1;fontColor=#6A1B9A;" value="queries" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="se1" edge="1" parent="1" source="trino_init" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#E65100;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="s3_rt">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="se1l" connectable="0" parent="se1" style="edgeLabel;html=1;fontSize=8;fontStyle=1;fontColor=#E65100;" value="INSERT&#xa;base rows" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="se2" edge="1" parent="1" source="alp_icon" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#C62828;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;entryPerimeter=0;" target="s3_rt">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="150" y="417" />
+              <mxPoint x="150" y="400" />
+              <mxPoint x="790" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="se2l" connectable="0" parent="se2" style="edgeLabel;html=1;fontSize=8;fontStyle=1;fontColor=#C62828;" value="Glue Microbatch&#xa;MERGE INTO / 5 min" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="se3" edge="1" parent="1" source="s3_rt" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#6A1B9A;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" target="sup_rt">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="se3l" connectable="0" parent="se3" style="edgeLabel;html=1;fontSize=8;fontStyle=1;fontColor=#6A1B9A;" value="queries&#xa;30s refresh" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="af_bg" parent="1" style="rounded=1;fillColor=#ECEFF1;strokeColor=#B0BEC5;shadow=1;" value="" vertex="1">
+          <mxGeometry height="55" width="1140" x="15" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="af_s1" parent="1" style="rounded=1;fillColor=#C8E6C9;strokeColor=#66BB6A;fontSize=8;fontStyle=1;shadow=1;align=center;" value="download&#xa;daily_data" vertex="1">
+          <mxGeometry height="30" width="75" x="80" y="633" as="geometry" />
+        </mxCell>
+        <mxCell id="afa1" edge="1" parent="1" source="af_s1" style="html=1;strokeWidth=1;strokeColor=#666;" target="af_s2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="af_s2" parent="1" style="rounded=1;fillColor=#FFF9C4;strokeColor=#FFE082;fontSize=8;fontStyle=1;shadow=1;align=center;" value="load&#xa;staging" vertex="1">
+          <mxGeometry height="30" width="75" x="175" y="633" as="geometry" />
+        </mxCell>
+        <mxCell id="afa2" edge="1" parent="1" source="af_s2" style="html=1;strokeWidth=1;strokeColor=#666;" target="af_s3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="af_s3" parent="1" style="rounded=1;fillColor=#BBDEFB;strokeColor=#90CAF9;fontSize=8;fontStyle=1;shadow=1;align=center;" value="staging&#xa;to_fact" vertex="1">
+          <mxGeometry height="30" width="75" x="270" y="633" as="geometry" />
+        </mxCell>
+        <mxCell id="afa3" edge="1" parent="1" source="af_s3" style="html=1;strokeWidth=1;strokeColor=#666;" target="af_s4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="af_s4" parent="1" style="rounded=1;fillColor=#C8E6C9;strokeColor=#66BB6A;fontSize=8;fontStyle=1;shadow=1;align=center;" value="load&#xa;cumulative" vertex="1">
+          <mxGeometry height="30" width="75" x="365" y="633" as="geometry" />
+        </mxCell>
+        <mxCell id="afa4" edge="1" parent="1" source="af_s4" style="html=1;strokeWidth=1;strokeColor=#666;" target="af_s5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="af_s5" parent="1" style="rounded=1;fillColor=#C8E6C9;strokeColor=#66BB6A;fontSize=8;fontStyle=1;shadow=1;align=center;" value="load&#xa;dim" vertex="1">
+          <mxGeometry height="30" width="75" x="460" y="633" as="geometry" />
+        </mxCell>
+        <mxCell id="afa5" edge="1" parent="1" source="af_s5" style="html=1;strokeWidth=1;strokeColor=#666;" target="af_s6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="af_s6" parent="1" style="rounded=1;fillColor=#FFCDD2;strokeColor=#EF9A9A;fontSize=8;fontStyle=1;shadow=1;align=center;" value="DQ&#xa;checks" vertex="1">
+          <mxGeometry height="30" width="75" x="555" y="633" as="geometry" />
+        </mxCell>
+        <mxCell id="af_label1" parent="1" style="text;html=1;fontSize=9;fontStyle=1;fontColor=#555;align=left;" value="Astronomer (Airflow) — Batch DAG: 6 tasks daily at 8 AM UTC" vertex="1">
+          <mxGeometry height="14" width="400" x="650" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="af_label2" parent="1" style="text;html=1;fontSize=9;fontStyle=1;fontColor=#555;align=left;" value="Speed DAG: 2 tasks — init (Trino SQL) → microbatch (Glue, ~7.5h)" vertex="1">
+          <mxGeometry height="14" width="400" x="650" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="divider" parent="1" style="shape=line;strokeColor=#B0BEC5;strokeWidth=1;dashed=1;dashPattern=6 4;" value="" vertex="1">
+          <mxGeometry height="10" width="770" x="190" y="375" as="geometry" />
+        </mxCell>
+        <mxCell id="btag" parent="1" style="text;html=1;fontSize=9;fontStyle=1;fontColor=#E65100;fillColor=#FFF3E0;strokeColor=#FF9800;rounded=1;align=center;" value="Batch" vertex="1">
+          <mxGeometry height="16" width="40" x="195" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="stag" parent="1" style="text;html=1;fontSize=9;fontStyle=1;fontColor=#0D47A1;fillColor=#E3F2FD;strokeColor=#1565C0;rounded=1;align=center;" value="Speed" vertex="1">
+          <mxGeometry height="16" width="40" x="195" y="388" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp /Users/v/Downloads/dataexpert-v4-capstone-project-main/dags/etl/load_daily_stock_price_dag.py /Users/v/Downloads/sp500-stock-tracker/dags/)",
+      "Bash(cp /Users/v/Downloads/dataexpert-v4-capstone-project-main/dags/etl/update_current_day_stock_price_microbatch_dag.py /Users/v/Downloads/sp500-stock-tracker/dags/)",
+      "Bash(astro version *)",
+      "Bash(astro dev *)",
+      "Bash(mv /Users/v/Downloads/dataexpert-v4-capstone-project-main/dags/etl/load_daily_stock_price_dag.py /Users/v/Downloads/dataexpert-v4-capstone-project-main/dags/etl/load_daily_stock_price_dag.py.bak)",
+      "Bash(mv /Users/v/Downloads/dataexpert-v4-capstone-project-main/dags/etl/update_current_day_stock_price_microbatch_dag.py /Users/v/Downloads/dataexpert-v4-capstone-project-main/dags/etl/update_current_day_stock_price_microbatch_dag.py.bak)",
+      "Bash(cp /Users/v/Downloads/sp500-stock-tracker/dags/load_daily_stock_price_dag.py /Users/v/Downloads/dataexpert-v4-capstone-project-main/dags/etl/)",
+      "Bash(cp /Users/v/Downloads/sp500-stock-tracker/dags/update_current_day_stock_price_microbatch_dag.py /Users/v/Downloads/dataexpert-v4-capstone-project-main/dags/etl/)",
+      "Bash(rm -rf '/Users/v/Downloads/sp500-stock-tracker/superset/*')",
+      "Bash(cp /Users/v/Downloads/dataexpert-v4-capstone-project-main/superset/dashboard_export.zip /Users/v/Downloads/sp500-stock-tracker/superset/)",
+      "Bash(cp -R /Users/v/Downloads/dataexpert-v4-capstone-project-main/superset/real_time_stock_price_fluctuations_dashboard_export /Users/v/Downloads/sp500-stock-tracker/superset/)",
+      "Bash(cp /Users/v/Downloads/dataexpert-v4-capstone-project-main/docker/superset/Dockerfile /Users/v/Downloads/sp500-stock-tracker/superset/)",
+      "Bash(cp /Users/v/Downloads/dataexpert-v4-capstone-project-main/docker/superset/entrypoint.sh /Users/v/Downloads/sp500-stock-tracker/superset/)"
+    ]
+  }
+}
